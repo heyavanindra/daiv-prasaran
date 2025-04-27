@@ -7,6 +7,7 @@ import sadanand from '../assets/images/Mystic & Sadanand.png';
 import yogaLeft from '../assets/images/yoga-left.png';
 import lotus from '../assets/images/lotus.png';
 import yogaRight from '../assets/images/yoga-right.png';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -26,6 +27,9 @@ function Hero({onGetPath}) {
   const navigate = useNavigate();
 
 
+  const {t} = useTranslation()
+
+
   return (
     <>
     
@@ -40,7 +44,7 @@ function Hero({onGetPath}) {
           }}>
             <img src={lineage} alt="lineage" className='w-full'/>
           </div>
-          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>Lineage</p>
+          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>{t("hero.mainHeading.lineage","")}</p>
           </div>
           <div>
           <div className='w-72 h-72 rounded-full overflow-hidden flex items-center justify-center'
@@ -51,7 +55,7 @@ function Hero({onGetPath}) {
           >
             <img src={mission} alt="lineage" className='w-full'/>
           </div>
-          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>Mission</p>
+          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>{t("hero.mainHeading.mission","Mission")}</p>
           </div>
           <div>
           <div className='w-72 h-72 rounded-full bg-black overflow-hidden flex items-center justify-center'
@@ -62,7 +66,9 @@ function Hero({onGetPath}) {
           >
             <img src={sadanand} alt="lineage" className='w-full'/>
           </div>
-          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>Mysticism & Sadanand</p>
+          <p className='text-center text-custom-ivory font-semibold text-3xl py-2'>{t("hero.mainHeading.MysticismAndSadanand",
+            "Mysticism & Sadanand"
+          )}</p>
           </div>
           
         </div>
